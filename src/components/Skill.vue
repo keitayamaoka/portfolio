@@ -1,10 +1,9 @@
 <template>
-   <div>
-     Skill
-   </div>
+   <div></div>
 </template>
+
 <script>
 export default {
-    name: 'Skill'
+  name: 'Skill'
 }
 </script>

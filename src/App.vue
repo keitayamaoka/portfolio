@@ -1,9 +1,5 @@
 <template>
-  <div id="app">
-    <button @click="toggle" class="btn btn-success">toggle</button>
-    <Drawer @close="toggle" align="left" :closeable="true">
-      <div v-if="open">content here</div>
-    </Drawer>
+  <div>
     <Header />
     <Main />
     <About />
@@ -14,7 +10,6 @@
 </template>
 
 <script>
-import Drawer from "vue-simple-drawer";
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import About from './components/About.vue'
@@ -24,40 +19,23 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-    Drawer,
     Header,
     Main,
     About,
     Skill,
     Vision,
     Footer 
-  },
-  data() {
-    return {
-      open: false
-    }
-  },
-methods: {
-  toggle() {
-    this.open = !this.open
   }
- }
-};
+}
 </script>
 
-<style lang="scss">
-@import "~bootstrap/scss/bootstrap-reboot",
-"~bootstrap/scss/buttons";
-</style>
 <style>
-#app {
+
+ #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-top: 150px;
-  margin: 0 auto;
-  width: 800px; 
-}
+ }
 </style>

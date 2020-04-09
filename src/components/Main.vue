@@ -1,22 +1,47 @@
+
 <template>
-   <div>
-    <mainSection></mainSection> 
+   <div id="mainSection">
+     <div class="userName">K.Yamaoka</div>
+     <div class="companyName">Seattleconsulting</div>
+     <img class="profilePicture" src="../assets/pro.png">
    </div>
 </template>
+
 <script>
 export default {
-    name: 'Main'
+  name: 'Main'
 }
 </script>
 
 <style scoped>
- 
- mainSection{
-    background: -moz-linear-gradient(top,#80e1f7,#06c1e6); 
-    background: -webkit-linear-gradient(top, #80e1f7, #06c1e6); 
-    background: linear-gradient(to bottom, #80e1f7, #06c1e6); 
-    width: auto;
+#mainSection{
+    background: linear-gradient(180deg,#80e1f7,#06c1e6); 
+    padding-bottom: 30px;
+    width: 100%;
     height: auto;
-}
+    text-align: center;
+    } 
+   
+    .userName{
+    padding: 20px;
+    color: #ffffff;
+    font-family: Noto Sans , Bold ;
+    font-size: 20pt;
+    text-shadow:1px 1px 5px #c0c0c0;
+    }
 
+    .companyName{
+    color: #ffffff;
+    font-family: Noto Sans , Bold;
+    font-size: 20pt;
+    text-shadow:1px 1px 5px #c0c0c0;
+    }
+
+    .profilePicture{
+    position: relative;
+    top: 15px;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    }    
 </style>

@@ -1,7 +1,5 @@
 <template>
-   <div>
-     Footer
-   </div>
+   <div></div>
 </template>
 
 <script>
