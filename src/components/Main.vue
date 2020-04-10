@@ -1,10 +1,13 @@
-
 <template>
   <div id="mainSection">
-    <div class="userName">
+    <div
+      class="userName"
+    >
       K.Yamaoka
     </div>
-    <div class="companyName">
+    <div
+      class="companyName"
+    >
       Seattleconsulting
     </div>
     <img
@@ -18,6 +21,7 @@
 export default {
   name: 'Main'
 }
+
 </script>
 
 <style scoped>
@@ -30,10 +34,10 @@ export default {
 }
 
 .userName {
-  padding: 20px;
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 20pt;
+  font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
@@ -41,12 +45,13 @@ export default {
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 20pt;
+  font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .profilePicture {
   position: relative;
-  top: 15px;
+  top: 5px;
   border-radius: 50%;
   width: 64px;
   height: 64px;
