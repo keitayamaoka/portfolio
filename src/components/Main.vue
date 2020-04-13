@@ -3,7 +3,7 @@
     <div
       class="userName"
     >
-      K.Yamaoka
+      Keita.Yamaoka
     </div>
     <div
       class="companyName"
@@ -27,7 +27,7 @@ export default {
 <style scoped>
 #mainSection {
   background: linear-gradient(180deg, #80e1f7, #06c1e6);
-  padding-bottom: 30px;
+  padding: 10px;
   width: 100%;
   height: auto;
   text-align: center;
@@ -44,6 +44,7 @@ export default {
 .companyName {
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 30px;
   font-size: 20pt;
   font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
@@ -51,8 +52,8 @@ export default {
 
 .profilePicture {
   position: relative;
-  top: 5px;
   border-radius: 50%;
+  top: 5px;
   width: 64px;
   height: 64px;
 }
