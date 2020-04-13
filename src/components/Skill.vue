@@ -8,7 +8,7 @@
     <div
       class="skillExplain"
     >
-      文章が入ります
+      文章が入りますああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
     </div>
     <lavel
       for="gitHubLabel"
@@ -16,12 +16,17 @@
       GitHub :
       <a href="https://github.com/keitayamaoka/portfolio">https://github.com/keitayamaoka/portfolio</a>
     </lavel>
+    <div
+      class="skillGrapf"
+    >
+      Front-end
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Skill'
+  name: 'Skill',
 }
 </script>
 
@@ -39,6 +44,7 @@ export default {
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
+  font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
