@@ -1,10 +1,5 @@
 <template>
   <div id="footerSection">
-    <div
-      class="footerCopyright"
-    >
-      © Seattleconsulting
-    </div>
     <a
       href="#"
       @click="clickSmoothScroll()"
@@ -12,18 +7,24 @@
       id="footerScroll"
       src="../assets/ue.png"
     ></a>
+    <div class="footerCopyright">
+      &copy;seattleconsulting
+    </div>
   </div>
 </template>
 
 <script>
-export default {
 
-  methods: {
+export default {
+  name: 'Footer'
+  ,methods: {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
         document.querySelector('#app'),
         400,
+        null,
+        null,
         'y'
       )
     }
@@ -46,9 +47,8 @@ export default {
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
-.footerScroll {
-  top: 5px;
-  width: 10px;
-  height: 10px;
+#footerScroll {
+  width: 40px;
+  height: 40px;
 }
 </style>
