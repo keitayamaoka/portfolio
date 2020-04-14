@@ -2,7 +2,7 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'Chart2',
   extends: Radar,
   data () {
     return {
@@ -47,4 +47,3 @@ export default {
 }
 
 </script>
-

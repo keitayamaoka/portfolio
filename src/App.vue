@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Header />
     <Main />
     <About />
@@ -24,7 +24,7 @@ export default {
     About,
     Skill,
     Vision,
-    Footer 
+    Footer
   }
 }
 </script>
@@ -35,7 +35,6 @@ export default {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
   }
 </style>

@@ -15,7 +15,14 @@
       for="nav-input"
     />
     <div id="nav-content">
-      ここに中身を入れる
+      <ul>
+        <li> Home</li>
+        <li> About Me</li>
+        <li> Skill Sets</li>
+        <li> Vision</li>
+        <li> Customize Item1</li>
+        <li> Customize Item2</li>
+      </ul>
     </div>
   </div>
 </template>

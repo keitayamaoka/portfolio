@@ -2,7 +2,7 @@
 import { Radar } from 'vue-chartjs';
 
 export default {
-  name: 'Chart',
+  name: 'Chart3',
   extends: Radar,
   data () {
     return {
@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Radar Dataset',
-            data: [30, 30, 20, 30, 40,],
+            data: [30, 30, 20, 30, 50,],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -47,4 +47,3 @@ export default {
 }
 
 </script>
-
