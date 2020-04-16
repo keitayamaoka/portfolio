@@ -54,16 +54,14 @@
 }
 
 .drawerMenuItemLink {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .drawerMenuSection li {
-  border: 1px solid #aaa8a8;
+  border: 1px solid #55e9d5;
   padding: 20px;
-  color: #aaa8a8;
   background-color: #fff;
-  text-shadow: 1px 2px 3px #c0c0c0;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 #drawerButton {
@@ -77,7 +75,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #aaa8a8;
+  color: #419fec;
   text-decoration: none;
 }
 </style>

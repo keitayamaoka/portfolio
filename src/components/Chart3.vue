@@ -10,21 +10,10 @@ export default {
         labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [30, 30, 20, 30, 50,],
+            label: 'DevOps',
+            data: [3, 1, 2, 3, 1,],
             backgroundColor: [
-              'rgba(217, 190, 233,1)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)'
+              'rgba(87, 16, 131, 0.25)',
             ],
             borderWidth: 1
           }
@@ -34,7 +23,7 @@ export default {
         scale: {
           ticks: {
             beginAtZero:true,
-            max: 50,
+            max: 10,
             min: 0
           }
         }

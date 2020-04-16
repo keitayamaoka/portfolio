@@ -10,8 +10,8 @@ export default {
         labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [30, 30, 20, 30, 30,],
+            label: 'Front-end',
+            data: [3, 3, 2, 1, 3,],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)'
             ],
@@ -23,7 +23,7 @@ export default {
         scale: {
           ticks: {
             beginAtZero:true,
-            max: 50,
+            max: 10,
             min: 0
           }
         }

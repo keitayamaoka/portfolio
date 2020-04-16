@@ -8,7 +8,9 @@
     <div
       class="skillExplain"
     >
-      スキルについてまとめました。苦手なことが多く、未熟者ですがこれから広く知識を高めていきます。そしてデザインの興味があるので、CSSなどのスキルをどんどん高めていきます。
+      スキルについてまとめました。
+      グラフは10段階評価で表示させていますが、ご覧の通りまだ身に付いていないものばかりです。しかしHTMLやCSSの技術はポートフォリオの実装で多少なりとも伸びました。
+      これから広く知識と技術を高めていきます。その中でもデザインに興味があるので、CSSなどのスキルをどんどん上げていきます。
     </div>
     <label id="gitHubLabel">
       GitHub
@@ -125,7 +127,7 @@ export default {
 
 <style scoped>
 #skillSection {
-  background: #fff;
+  background: rgb(253, 253, 253);
   padding: 10px;
   width: 100%;
   height: auto;
@@ -134,11 +136,10 @@ export default {
 
 .skillTitle {
   padding: 7px;
-  color: #20879f;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18pt;
+  color: #33a4f0;
+  font-family: 'Arial', sans-serif;
+  font-size: 22pt;
   font-weight: bold;
-  text-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .skillExplain {
@@ -150,6 +151,7 @@ export default {
   display: inline-block;
   text-align: left;
   line-height: 25px;
+  font-weight: bold;
 }
 
 #gitHubLink {
@@ -167,12 +169,14 @@ export default {
 
 .skillCategories li {
   padding: 10px;
+  font-family: 'Arial', sans-serif;
   display: inline-flex;
   font-size: 20px;
 }
 
 .skillList1 li {
   padding: 10px;
+  font-family: 'Arial', sans-serif;
   display: inline-block;
   color: #c00;
   font-size: 20px;
@@ -182,6 +186,7 @@ export default {
 
 .skillList2 li {
   padding: 10px;
+  font-family: 'Arial', sans-serif;
   display: inline-flex;
   position: relative;
   top: 10px;
@@ -193,6 +198,7 @@ export default {
 
 .skillList3 li {
   padding: 10px;
+  font-family: 'Arial', sans-serif;
   display: inline-flex;
   position: relative;
   top: 20px;
@@ -206,6 +212,10 @@ export default {
   position: relative;
   margin: 10px 0 1px;
   top: 10px;
+  width: 330px;
+  height: 330px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .front-Change li {

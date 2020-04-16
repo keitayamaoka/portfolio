@@ -10,8 +10,8 @@ export default {
         labels: ['Java', 'Ruby', 'RubyOnRails', 'MySql', 'Python'],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [30, 30, 20, 30, 40,],
+            label: 'Back-end',
+            data: [1, 2, 2, 2, 1,],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
             ],
@@ -23,7 +23,7 @@ export default {
         scale: {
           ticks: {
             beginAtZero:true,
-            max: 50,
+            max: 10,
             min: 0
           }
         }
