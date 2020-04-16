@@ -8,26 +8,38 @@
     <div
       class="skillExplain"
     >
-      文章が入りますああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      スキルについてまとめました。苦手なことが多く、未熟者ですがこれから広く知識を高めていきます。そしてデザインの興味があるので、CSSなどのスキルをどんどん高めていきます。
     </div>
-    <lavel
-      for="gitHubLabel"
-    >
-      GitHub :
-      <a href="https://github.com/keitayamaoka/portfolio">https://github.com/keitayamaoka/portfolio</a>
-    </lavel>
+    <label id="gitHubLabel">
+      GitHub:
+      <a
+        id="gitHubLink"
+        href="https://github.com/keitayamaoka/portfolio"
+      >https://github.com/keitayamaoka/portfolio</a>
+    </label>
     <ul class="skillCategories">
       <li>
         <span
-          @click="change"
+          id="frontChart"
+          @click="f_Change"
         >Front-end</span>
       </li>
-      <li>Back-end</li>
-      <li>DevOps</li>
+      <li>
+        <span
+          id="backChart"
+          @click="b_Change"
+        >Back-end</span>
+      </li>
+      <li>
+        <span
+          id="devChart"
+          @click="d_Change"
+        >DevOps</span>
+      </li>
     </ul>
     <ul
-      :class="{'active': isActive}"
       class="skillList1"
+      :class="{'front-Change': frontChange}"
     >
       <li>HTML</li>
       <li>CSS</li>
@@ -35,22 +47,42 @@
       <li>SCSS</li>
       <li>Vue</li>
     </ul>
-    <ul class="skillList2">
+    <ul
+      class="skillList2"
+      :class="{'back-Change': backChange}"
+    >
       <li>Java</li>
       <li>Ruby</li>
       <li>RubyOnRails</li>
       <li>MySQL</li>
+      <li>Python</li>
     </ul>
-    <ul class="skillList3">
+    <ul
+      class="skillList3"
+      :class="{'dep-Change': depChange}"
+    >
       <li>Linux</li>
+      <li>Node</li>
       <li>Git</li>
       <li>GitHub</li>
       <li>Firebase</li>
     </ul>
     <div id="skillGraph">
-      <Chart />
-      <Chart2 />
-      <Chart3 />
+      <div
+        v-if="currentChart=='front'"
+      >
+        <Chart />
+      </div>
+      <div
+        v-if="currentChart=='back'"
+      >
+        <Chart2 />
+      </div>
+      <div
+        v-if="currentChart=='dep'"
+      >
+        <Chart3 />
+      </div>
     </div>
   </div>
 </template>
@@ -59,6 +91,7 @@
 import Chart from './Chart';
 import Chart2 from './Chart2';
 import Chart3 from './Chart3';
+
 export default {
   name: 'Skill',
   components: {
@@ -66,9 +99,28 @@ export default {
     Chart2,
     Chart3
   },
-  methods:{
-    change(){
-      this.isActive=!this.isActive
+  data(){
+    return{
+      frontChange: true,
+      backChange: false,
+      depChange: false
+    }
+  },
+  methods: {
+    f_Change(){
+      this.frontChange=!this.frontChange
+      this.backChange=false,
+      this.depChange=false
+    },
+    b_Change(){
+      this.backChange=!this.backChange
+      this.frontChange=false,
+      this.depChange=false
+    },
+    d_Change(){
+      this.depChange=!this.depChange
+      this.frontChange=false,
+      this.backChange=false
     }
   }
 }
@@ -87,20 +139,27 @@ export default {
   padding: 7px;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt;
+  font-size: 18pt;
   font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .skillExplain {
+  padding: 15px;
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12;
-  word-break: break-all;
+  word-break: keep-all;
   line-height: 25px;
 }
 
-.gitHubLabel {
+#gitHubLink {
+  color: #20879f;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+}
+
+#gitHubLabel {
   padding: 7px;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
@@ -144,6 +203,23 @@ export default {
   box-shadow: 2px 2px 4px gray;
 }
 
+#skillGraph {
+  position: relative;
+  top: 30px;
+}
+
+.front-Change li {
+  background-color: rgb(241, 195, 173);
+}
+
+.back-Change li {
+  background-color: rgb(184, 245, 204);
+}
+
+.dep-Change li {
+  background-color: rgb(217, 190, 233);
+}
+
 .skillCategories li:nth-child(3n+1) {
   color: #c00;
 }
@@ -156,12 +232,4 @@ export default {
   color: #a16eff;
 }
 
-#skillGraph {
-  position: relative;
-  top: 30px;
-}
-
-.active {
-  display: none;
-}
 </style>

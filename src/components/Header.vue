@@ -15,21 +15,18 @@
       for="nav-input"
     />
     <div id="nav-content">
-      <ul>
-        <li> Home</li>
-        <li> About Me</li>
-        <li> Skill Sets</li>
-        <li> Vision</li>
-        <li> Customize Item1</li>
-        <li> Customize Item2</li>
-      </ul>
+      <Menu />
     </div>
   </div>
 </template>
 
 <script>
+import Menu from './Menu.vue'
 export default {
-  name: 'HeaderButton',
+  name: 'Header',
+  components: {
+    Menu
+  }
 }
 </script>
 
@@ -119,6 +116,5 @@ export default {
 #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);/* 中身を表示（右へスライド） */
-  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 </style>

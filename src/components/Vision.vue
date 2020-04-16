@@ -8,7 +8,7 @@
     <div
       class="visionExplain"
     >
-      ここに文章が入りますあああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      スキルについてまとめました。苦手なことが多く、未熟者ですがこれから広く知識を高めていきます。そしてデザインの興味があるので、CSSなどのスキルをどんどん高めていきます。
     </div>
   </div>
 </template>
@@ -31,15 +31,17 @@ export default {
 .visionTitle {
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .visionExplain {
+  padding: 15px;
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  word-break: break-all;
+  word-break: keep-all;
   line-height: 25px;
 }
 </style>
