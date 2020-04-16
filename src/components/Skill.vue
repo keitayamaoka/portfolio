@@ -11,7 +11,7 @@
       スキルについてまとめました。苦手なことが多く、未熟者ですがこれから広く知識を高めていきます。そしてデザインの興味があるので、CSSなどのスキルをどんどん高めていきます。
     </div>
     <label id="gitHubLabel">
-      GitHub:
+      GitHub
       <a
         id="gitHubLink"
         href="https://github.com/keitayamaoka/portfolio"
@@ -20,26 +20,26 @@
     <ul class="skillCategories">
       <li>
         <span
-          id="frontChart"
-          @click="f_Change"
+          id="front"
+          @click="setCurrentChart('front')"
         >Front-end</span>
       </li>
       <li>
         <span
-          id="backChart"
-          @click="b_Change"
+          id="back"
+          @click="setCurrentChart('back')"
         >Back-end</span>
       </li>
       <li>
         <span
-          id="devChart"
-          @click="d_Change"
+          id="devOps"
+          @click="setCurrentChart('devOps')"
         >DevOps</span>
       </li>
     </ul>
     <ul
       class="skillList1"
-      :class="{'front-Change': frontChange}"
+      :class="{'front-Change': isFrontActive}"
     >
       <li>HTML</li>
       <li>CSS</li>
@@ -49,7 +49,7 @@
     </ul>
     <ul
       class="skillList2"
-      :class="{'back-Change': backChange}"
+      :class="{'back-Change': isBackActive}"
     >
       <li>Java</li>
       <li>Ruby</li>
@@ -59,7 +59,7 @@
     </ul>
     <ul
       class="skillList3"
-      :class="{'dep-Change': depChange}"
+      :class="{'dep-Change': isDevOpsActive}"
     >
       <li>Linux</li>
       <li>Node</li>
@@ -69,17 +69,17 @@
     </ul>
     <div id="skillGraph">
       <div
-        v-if="currentChart=='front'"
+        v-if="isFrontActive"
       >
         <Chart />
       </div>
       <div
-        v-if="currentChart=='back'"
+        v-if="isBackActive"
       >
         <Chart2 />
       </div>
       <div
-        v-if="currentChart=='dep'"
+        v-if="isDevOpsActive"
       >
         <Chart3 />
       </div>
@@ -100,27 +100,24 @@ export default {
     Chart3
   },
   data(){
-    return{
-      frontChange: true,
-      backChange: false,
-      depChange: false
+    return {
+      currentChart: 'front'
     }
   },
+  computed: {
+    isFrontActive() {
+      return this.currentChart=='front';
+    },
+    isBackActive() {
+      return this.currentChart=='back';
+    },
+    isDevOpsActive() {
+      return this.currentChart=='devOps';
+    },
+  },
   methods: {
-    f_Change(){
-      this.frontChange=!this.frontChange
-      this.backChange=false,
-      this.depChange=false
-    },
-    b_Change(){
-      this.backChange=!this.backChange
-      this.frontChange=false,
-      this.depChange=false
-    },
-    d_Change(){
-      this.depChange=!this.depChange
-      this.frontChange=false,
-      this.backChange=false
+    setCurrentChart(chart) {
+      this.currentChart = chart;
     }
   }
 }
@@ -149,7 +146,9 @@ export default {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12;
-  word-break: keep-all;
+  word-break: normal;
+  display: inline-block;
+  text-align: left;
   line-height: 25px;
 }
 
@@ -177,7 +176,7 @@ export default {
   display: inline-block;
   color: #c00;
   font-size: 20px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
   box-shadow: 2px 2px 4px gray;
 }
 
@@ -188,7 +187,7 @@ export default {
   top: 10px;
   font-size: 20px;
   color: #090;
-  margin: 0 10px;
+  margin: 0 10px 10px;
   box-shadow: 2px 2px 4px gray;
 }
 
@@ -199,13 +198,14 @@ export default {
   top: 20px;
   font-size: 20px;
   color: #a16eff;
-  margin: 0 10px;
+  margin: 0 10px 10px;
   box-shadow: 2px 2px 4px gray;
 }
 
 #skillGraph {
   position: relative;
-  top: 30px;
+  margin: 10px 0 1px;
+  top: 10px;
 }
 
 .front-Change li {

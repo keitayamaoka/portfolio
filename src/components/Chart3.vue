@@ -7,7 +7,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
         datasets: [
           {
             label: 'Radar Dataset',

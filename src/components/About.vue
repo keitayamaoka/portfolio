@@ -33,10 +33,13 @@ export default {
 }
 
 .aboutExplain {
+  padding: 15px;
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  word-break: keep-all;
+  word-break: normal;
+  display: inline-block;
+  text-align: left;
   line-height: 25px;
 }
 </style>
