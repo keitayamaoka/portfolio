@@ -8,7 +8,9 @@
     <div
       class="visionExplain"
     >
-      スキルについてまとめました。苦手なことが多く、未熟者ですがこれから広く知識を高めていきます。そしてデザインの興味があるので、CSSなどのスキルをどんどん高めていきます。
+      まだ自分の中で明確に目標が決まっているわけではありませんが、
+      デザインに興味があるのでそちらのスキルを高めていきます。
+      また、今回のポートフォリオの実装であらゆる技術を持っていると、表現の幅が広がると感じたので沢山学び、自分の糧にしていきます。
     </div>
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
 
 <style scoped>
 #visionSection {
-  background: #f5f5f5;
+  background: #d6f1f0;
   padding: 10px;
   width: 100%;
   height: auto;
@@ -29,11 +31,10 @@ export default {
 }
 
 .visionTitle {
-  color: #20879f;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18px;
+  color: #33a4f0;
+  font-family: 'Arial', sans-serif;
+  font-size: 22pt;
   font-weight: bold;
-  text-shadow: 1px 1px 5px #c0c0c0;
 }
 
 .visionExplain {
@@ -41,7 +42,10 @@ export default {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  word-break: keep-all;
+  word-break: normal;
+  display: inline-block;
+  text-align: left;
   line-height: 25px;
+  font-weight: bold;
 }
 </style>

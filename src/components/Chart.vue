@@ -10,21 +10,10 @@ export default {
         labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [30, 30, 20, 30, 40,],
+            label: 'Front-end',
+            data: [3, 3, 2, 1, 3,],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)'
+              'rgba(255, 99, 132, 0.2)'
             ],
             borderWidth: 1
           }
@@ -34,7 +23,7 @@ export default {
         scale: {
           ticks: {
             beginAtZero:true,
-            max: 50,
+            max: 10,
             min: 0
           }
         }

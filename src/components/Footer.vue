@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 #footerSection {
-  background: linear-gradient(180deg, #80e1f7, #06c1e6);
+  background: linear-gradient(180deg, #0e87f8, #7ef3da);
   padding: 10px;
   width: 100%;
   height: auto;

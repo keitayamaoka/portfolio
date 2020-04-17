@@ -33,7 +33,7 @@ export default {
 <style>
 #HeaderButton {
   padding: 10px;
-  background: #f3f3f3;
+  background: #7ef3da;
   width: 100%;
   height: auto;
 }
