@@ -170,7 +170,7 @@ export default {
 .skillCategories li {
   padding: 10px;
   font-family: 'Arial', sans-serif;
-  display: inline-flex;
+  display: inline-block;
   font-size: 20px;
 }
 

@@ -8,7 +8,7 @@
       src="../assets/ue.png"
     ></a>
     <div class="footerCopyright">
-      &copy;seattleconsulting
+      &copy;SeattleConsulting
     </div>
   </div>
 </template>
@@ -43,6 +43,7 @@ export default {
 
 .footerCopyright {
   color: #fff;
+  font-size: 16pt;
   font-family: 'Noto Sans JP', sans-serif;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
