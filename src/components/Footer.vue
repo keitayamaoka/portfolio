@@ -43,7 +43,7 @@ export default {
 
 .footerCopyright {
   color: #fff;
-  font-size: 16pt;
+  font-size: 13pt;
   font-family: 'Noto Sans JP', sans-serif;
   text-shadow: 1px 1px 5px #c0c0c0;
 }
@@ -52,4 +52,5 @@ export default {
   width: 40px;
   height: 40px;
 }
+
 </style>

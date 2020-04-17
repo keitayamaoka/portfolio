@@ -155,20 +155,22 @@ export default {
 }
 
 #gitHubLink {
+  padding-top: 40px;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt;
+  font-size: 16pt;
+  margin: 0 10px 10px;
 }
 
 #gitHubLabel {
-  padding: 7px;
+  padding-top: 40px;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt;
+  font-size: 16pt;
 }
 
 .skillCategories li {
-  padding: 10px;
+  padding: 20px;
   font-family: 'Arial', sans-serif;
   display: inline-block;
   font-size: 20px;
