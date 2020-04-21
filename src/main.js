@@ -4,6 +4,10 @@ import './assets/css/reset.css'
 Vue.config.productionTip = false
 import smoothScroll from 'vue-smoothscroll'
 Vue.use(smoothScroll)
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 
 new Vue({
   render: h => h(App),
