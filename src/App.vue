@@ -6,6 +6,14 @@
       {{ this.skills }}
     </div>
     <About />
+    <ul>
+      <li
+        v-for="(user, key) in users"
+        :key="key"
+      >
+        {{ user.name }} ({{ user.email }})
+      </li>
+    </ul>
     <Skill />
     <Vision />
     <Footer />
@@ -33,6 +41,11 @@ export default {
     return {
       skills: []
     }
+  },
+  computed :{
+   users : function(){
+     return this.$store.state.users
+   }
   },
   mounted () {
     this.getSkills();
