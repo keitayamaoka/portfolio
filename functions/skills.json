@@ -2,7 +2,7 @@
   "skills": [
     {
       "category": "front-end",
-      "skills":[
+      "Skills":[
         {
         "name": "HTML",
         "score": 3
@@ -27,7 +27,7 @@
     },
     {
       "category": "back-end",
-      "skills":[
+      "Skills":[
         {
         "name": "Java",
         "score": 1
@@ -52,7 +52,7 @@
     },
     {
       "category": "devops",
-      "skills":[
+      "Skills":[
       {
       "name": "Linux",
       "score": 3
