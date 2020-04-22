@@ -7,7 +7,7 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Front-end',
@@ -31,9 +31,15 @@ export default {
     }
   },
   mounted () {
+    this.getskills()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getskills(){
+      const skills = this.$store.state.skills
+      this.data.labels = skills
+    }
   }
 }
-
 </script>
 

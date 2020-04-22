@@ -6,12 +6,6 @@
       {{ this.skills }}
     </div>
     <About />
-    <div
-      v-for="user in users"
-      :key="user.id"
-    >
-      {{ user.name }}
-    </div>
     <Skill />
     <Vision />
     <Footer />
@@ -35,36 +29,13 @@ export default {
     Vision,
     Footer
   },
-  computed :{
-   users : function(){
-       return this.$store.state.users
-   }
+  computed:{
+  skills : function(){
+    return this.$store.state.skills
+    }
   },
   mounted () {
-    this.getSkills();
-    this.$store.dispatch('getUsers')
-  },
-  methods: {
-    increment : function(){
-      this.$store.dispatch('increment')
-    },
-    getSkills() {
-      // dataのスキルを初期化する
-      this.skills = [];
-      // this.skillsを一時変数のitemsに参照コピーする
-      let items = this.skills;
-      // axios.getを用いてデプロイ済のfunctionにアクセスする
-      this.axios.get('https://us-central1-portfolio-a92e4.cloudfunctions.net/skills')
-        .then((response) => {
-          response.data.forEach(function(skill) {
-            // 取得したデータを１件ずつ配列に設定する
-            items.push(skill);
-          })
-        })
-        .catch((e) => {
-          alert(e);
-        });
-    }
+    this.$store.dispatch('getSkills');
   }
 }
 </script>

@@ -6,19 +6,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    users: [],
+    skills: [],
+    loaded: false
   },
   mutations: {
-    setUsers : function(state,users) {
-      state.users = users
+    setSkills : function(state,skillsArray) {
+      skillsArray[0].Skills.forEach((skillInfo) => {
+        state.skills.push(skillInfo.name)
+      })
+      state.loaded = true
     }
   },
   actions: {
-    getUsers: function({commit}){
+    getSkills: function({commit}) {
       return axios.get('https://us-central1-portfolio-a92e4.cloudfunctions.net/skills')
         .then(response => {
-        commit('setUsers', response.data)
-      })
+          commit('setSkills', response.data)
+        })
     }
-  }
-});
+  },
+})
