@@ -7,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
+        labels: [],
         datasets: [
           {
             label: 'DevOps',
-            data: [3, 1, 2, 3, 1,],
+            data: [],
             backgroundColor: [
               'rgba(87, 16, 131, 0.25)',
             ],
@@ -26,13 +26,24 @@ export default {
             max: 10,
             min: 0
           }
+        },
+        legend: {
+        display:false
         }
       }
     }
   },
   mounted () {
+    this.getChartName()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getChartName(){
+      const names = this.$store.getters.skillName(2)
+      this.data.labels = names
+      const scores = this.$store.getters.skillScore(2)
+      this.data.datasets[0].data = scores
+    }
   }
 }
-
 </script>
