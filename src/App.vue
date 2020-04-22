@@ -6,6 +6,12 @@
       {{ this.skills }}
     </div>
     <About />
+    <div
+      v-for="user in users"
+      :key="user.id"
+    >
+      {{ user.name }}
+    </div>
     <Skill />
     <Vision />
     <Footer />
@@ -29,15 +35,19 @@ export default {
     Vision,
     Footer
   },
-  data() {
-    return {
-      skills: []
-    }
+  computed :{
+   users : function(){
+       return this.$store.state.users
+   }
   },
   mounted () {
     this.getSkills();
+    this.$store.dispatch('getUsers')
   },
   methods: {
+    increment : function(){
+      this.$store.dispatch('increment')
+    },
     getSkills() {
       // dataのスキルを初期化する
       this.skills = [];
@@ -67,5 +77,4 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
   }
-
 </style>
