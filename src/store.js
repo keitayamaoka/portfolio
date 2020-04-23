@@ -17,7 +17,8 @@ export default new Vuex.Store({
   },
   actions: {
     getSkills: function({commit}){
-      return axios.get('https://us-central1-portfolio-a92e4.cloudfunctions.net/skills')
+      const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skills';
+      return axios.get(functionsUrl)
         .then(response => {
           commit('setSkills', response.data)
         })
