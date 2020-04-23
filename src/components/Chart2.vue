@@ -7,11 +7,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRails', 'MySql', 'Python'],
+        labels: [],
         datasets: [
           {
-            label: 'Back-end',
-            data: [1, 2, 2, 2, 1,],
+            data: [],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
             ],
@@ -19,20 +18,31 @@ export default {
           }
         ]
       },
-      options: {
-        scale: {
-          ticks: {
+          options: {
+            scale: {
+              ticks: {
             beginAtZero:true,
             max: 10,
             min: 0
           }
+        },
+        legend: {
+        display:false
         }
       }
     }
   },
   mounted () {
+    this.getChartName()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getChartName(){
+      const names = this.$store.getters.skillName(1)
+      this.data.labels = names
+      const scores = this.$store.getters.skillScore(1)
+      this.data.datasets[0].data = scores
+    }
   }
 }
-
 </script>

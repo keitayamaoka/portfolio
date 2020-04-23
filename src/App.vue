@@ -25,6 +25,14 @@ export default {
     Skill,
     Vision,
     Footer
+  },
+  computed:{
+  skills : function(){
+    return this.$store.state.skills
+    }
+  },
+  mounted () {
+    this.$store.dispatch('getSkills');
   }
 }
 </script>
@@ -37,5 +45,4 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
   }
-
 </style>
