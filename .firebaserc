@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "portfolio-a92e4"
+  },
+  "targets": {
+    "portfolio-a92e4": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-a92e4"
+        ]
+      }
+    },
+    "dev-portfolio-db7ac": {
+      "hosting": {
+        "portfolio": [
+          "dev-portfolio-db7ac"
+        ]
+      }
+    }
   }
 }
