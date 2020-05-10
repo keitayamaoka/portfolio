@@ -39,9 +39,9 @@ export default {
   },
   methods: {
     getChartName(){
-      const names = this.$store.getters.skillName(2)
+      const names = this.$store.getters.skillDevName
       this.data.labels = names
-      const scores = this.$store.getters.skillScore(2)
+      const scores = this.$store.getters.skillDevScore
       this.data.datasets[0].data = scores
     }
   }
