@@ -25,59 +25,23 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    skillName: (state) => {
-      const skillNameArray = []
-      if(state.skills[1]){
-        state.skills[1].skill.forEach((Name) => {
-          skillNameArray.push(Name.name)
-        })
+      skillName: (state) => (index) => {
+        const skillNameArray = []
+          if(state.skills[index]){
+            state.skills[index].skill.forEach((Name) => {
+            skillNameArray.push(Name.name)
+          })
       }
-      return skillNameArray
-    },
-    skillBackName: (state) => {
-      const skillNameArray = []
-      if(state.skills[0]){
-        state.skills[0].skill.forEach((Name) => {
-          skillNameArray.push(Name.name)
-        })
+       return skillNameArray
+      },
+      skillScore: (state) => (index) => {
+         const skillScoreArray = []
+          if(state.skills[index]){
+           state.skills[index].skill.forEach((Score) => {
+           skillScoreArray.push(Score.score)
+          })
       }
-      return skillNameArray
-    },
-    skillDevName: (state) => {
-      const skillNameArray = []
-      if(state.skills[2]){
-        state.skills[2].skill.forEach((Name) => {
-          skillNameArray.push(Name.name)
-        })
-      }
-      return skillNameArray
-    },
-    skillScore: (state) => {
-      const skillScoreArray = []
-      if(state.skills[1]){
-        state.skills[1].skill.forEach((Score) => {
-          skillScoreArray.push(Score.score)
-        })
-      }
-      return skillScoreArray
-    },
-    skillBackScore: (state) => {
-      const skillScoreArray = []
-      if(state.skills[0]){
-        state.skills[0].skill.forEach((Score) => {
-          skillScoreArray.push(Score.score)
-        })
-      }
-      return skillScoreArray
-    },
-    skillDevScore: (state) => {
-      const skillScoreArray = []
-      if(state.skills[2]){
-        state.skills[2].skill.forEach((Score) => {
-          skillScoreArray.push(Score.score)
-        })
-      }
-      return skillScoreArray
-    }
+        return skillScoreArray
+      },
   }
 })
