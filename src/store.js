@@ -25,20 +25,20 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    skillName: (state) => (index) => {
-      const skillNameArray = []
-      if(state.skills[index]){
-        state.skills[index].skill.forEach((Name) => {
-          skillNameArray.push(Name.name)
-        })
-      }
-      return skillNameArray
-    },
-    skillScore: (state) => (index) => {
-      const skillScoreArray = []
-      if(state.skills[index]){
-        state.skills[index].skill.forEach((Score) => {
-          skillScoreArray.push(Score.score)
+      skillName: (state) => (index) => {
+        const skillNameArray = []
+          if(state.skills[index]){
+            state.skills[index].skill.forEach((Name) => {
+            skillNameArray.push(Name.name)
+          })
+        }
+       return skillNameArray
+      },
+      skillScore: (state) => (index) => {
+        const skillScoreArray = []
+        if(state.skills[index]){
+           state.skills[index].skill.forEach((Score) => {
+            skillScoreArray.push(Score.score)
         })
       }
       return skillScoreArray
