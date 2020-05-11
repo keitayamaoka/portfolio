@@ -31,17 +31,17 @@ export default new Vuex.Store({
             state.skills[index].skill.forEach((Name) => {
             skillNameArray.push(Name.name)
           })
-      }
+        }
        return skillNameArray
       },
       skillScore: (state) => (index) => {
-         const skillScoreArray = []
-          if(state.skills[index]){
+        const skillScoreArray = []
+        if(state.skills[index]){
            state.skills[index].skill.forEach((Score) => {
-           skillScoreArray.push(Score.score)
-          })
+            skillScoreArray.push(Score.score)
+        })
       }
-        return skillScoreArray
-      },
+      return skillScoreArray
+    }
   }
 })
